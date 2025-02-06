@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Document Viewer</title>
+    <link rel="stylesheet" href="Styles.css">
+    <style>
+        /* Set background image for body or specific div */
+        body {
+            background-image: url('Background2.jpg'); /* Replace with your image */
+            background-size: cover; /* Ensure the image covers the entire page */
+            background-position: center; /* Center the image */
+            background-attachment: fixed; /* Fix the background image when scrolling */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar style */
+        .navbar-content {
+            
+            background-color: white; /* Set navbar background to white */
+            padding: 10px 20px;
+        }
+
+        .navbar-content img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .navbar-content .owner-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .navbar-content .info-link {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 16px;
+        }
+
+        /* Add blur effect to h1 */
+        h1 {
+            backdrop-filter: blur(10px); /* Apply blur effect to the background */
+            padding: 20px;
+            color: white;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="hacker-bg" id="hacker-bg"></div>
+
+    <div class="navbar-content">
+        <img src="owner-image.png" alt="Prasann Gaikawad" class="owner-image">
+        <span class="owner-name" style="margin-left:40px;">More about owner </span>
+        <a>BRO - BCA 4th SEM DOCUMENTS... </a>
+        <a href="#" class="info-link">  </a>
+    </div>
+
+    <div class="container">
+        <h1>📂 Bro Document </h1>
+        <div id="document-list" class="document-list"></div>
+    </div>
+
+    <div id="document-viewer" class="viewer">
+        <button class="close-btn" onclick="closeViewer()">Close</button>
+        <iframe id="viewer-frame"></iframe>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
